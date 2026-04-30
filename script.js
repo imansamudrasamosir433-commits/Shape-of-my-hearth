@@ -1,4 +1,4 @@
-// 1. Daftar link Dropbox yang sudah disesuaikan agar bisa tampil langsung
+// 1. Daftar link foto Dropbox (Direct Link)
 const photoList = [
     "https://www.dropbox.com/scl/fi/tt78vwvb8hcl1qbi2zzoi/gambar4.jpg?rlkey=66gthw333mz6ome33rnmiotw4&st=dmpucjta&raw=1",
     "https://www.dropbox.com/scl/fi/ocyzi2w5otqn4ilf7tqlr/gambar2.jpg?rlkey=3pn0e2q7z1uerk9q1fmutyejb&st=7auw7j3w&raw=1",
@@ -7,7 +7,7 @@ const photoList = [
     "https://www.dropbox.com/scl/fi/ahu8xfu3dc3hndms95rpz/gambar5.jpg?rlkey=jjeli9ewpnp7v9kopmoovc39e&st=twml0v93&raw=1"
 ];
 
-// 2. Kumpulan kata-kata ucapan (bisa kamu ubah sesukamu)
+// 2. Kumpulan kata-kata ucapan
 const quotes = [
     "Terima kasih sudah menjadi bagian dari hariku.",
     "Kamu adalah alasan di balik senyumku hari ini.",
@@ -16,37 +16,40 @@ const quotes = [
     "Terima kasih untuk segalanya, tetaplah jadi dirimu yang hebat."
 ];
 
+// 3. Link Lagu Ghea Indrawari - 1000X (Direct Link)
+const musicUrl = "https://www.dropbox.com/scl/fi/pcz6x2b1rozji1o8gnfft/Ghea-Indrawari-1000X-Official-Visualizer.mp3?rlkey=fyzaod0zjfkk1ci45hi87cc5q&st=kwgwtvir&raw=1";
+
 let index = 0;
 const imgElement = document.getElementById("main-slide");
 const quoteElement = document.getElementById("quote");
 const audio = document.getElementById("audio");
 const btn = document.getElementById("musicBtn");
 
-// Pastikan gambar pertama langsung muncul saat halaman dibuka
+// Setting awal: masukkan sumber lagu & konten pertama
+audio.src = musicUrl;
 imgElement.src = photoList[0];
 quoteElement.innerText = quotes[0];
 
 function changeContent() {
     index = (index + 1) % photoList.length;
     
-    // Efek transisi halus (fade out)
+    // Animasi ganti foto (fade)
     imgElement.style.opacity = 0;
     
     setTimeout(() => {
         imgElement.src = photoList[index];
         quoteElement.innerText = quotes[index];
-        // Munculkan kembali (fade in)
         imgElement.style.opacity = 1;
     }, 1000);
 }
 
-// Ganti konten secara otomatis setiap 4 detik
+// Interval ganti foto setiap 4 detik
 setInterval(changeContent, 4000);
 
-// Fungsi untuk kontrol musik
+// Fungsi kontrol musik
 function togglePlay() {
     if (audio.paused) {
-        audio.play();
+        audio.play().catch(e => console.error("Gagal putar musik:", e));
         btn.innerText = "Jeda Musik ⏸️";
     } else {
         audio.pause();
