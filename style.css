@@ -85,7 +85,7 @@ body {
 
 .lyrics-container {
     margin-top: 15px;
-    height: 60px; /* Ukuran disesuaikan agar lirik panjang tidak terpotong */
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,7 +96,7 @@ body {
     color: #d896a7;
     font-weight: 600;
     font-style: italic;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.4s ease-in-out; /* Transisi halus agar tidak kaku */
 }
 
 #musicBtn {
