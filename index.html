@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartu Ucapan Spesial</title>
+    <title>Special Gift for You</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="card-container">
-        <div class="slideshow">
-            <img id="slide" src="foto1.jpg" alt="Kenangan">
-        </div>
+    <div class="leaf-container"></div>
 
-        <div class="content">
-            <h1>Untukmu,</h1>
-            <p id="quote">"Setiap detik bersamamu adalah cerita favoritku."</p>
+    <div class="card">
+        <div class="image-wrapper">
+            <img id="main-slide" src="foto1.jpg" alt="Memory">
         </div>
-
-        <audio id="mySong" loop>
-            <source src="musik.mp3" type="audio/mpeg">
-        </audio>
         
-        <button id="playBtn" onclick="togglePlay()">Mulai Musik 🎵</button>
+        <div class="text-section">
+            <h1 class="title">Untuk Seseorang yang Spesial</h1>
+            <p id="quote" class="quote">"Setiap detik yang terlewati, kamu tetap bagian terindah dalam cerita ini."</p>
+        </div>
+
+        <div class="controls">
+            <button id="musicBtn" onclick="togglePlay()">Putar Musik 🎵</button>
+        </div>
     </div>
+
+    <audio id="audio" loop>
+        <source src="musik.mp3" type="audio/mpeg">
+    </audio>
 
     <script src="script.js"></script>
 </body>
