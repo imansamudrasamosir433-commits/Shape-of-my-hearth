@@ -22,12 +22,12 @@ const lirikLagu = [
     { waktu: 37.5, teks: "Dan bila aku terlahir seribu kali lagi" },
     { waktu: 42.0, teks: "Di dunia yang lain aku tak peduli" },
     { waktu: 47.0, teks: "Kau akan kucari sampai kau tau betapa kau kucintai" },
-    { waktu: 63.5, teks: "Seribu kali lagi kau kan kucintai (kau kan kucintai)" },
+    { waktu: 63.5, teks: "1000X lagi kau kan kucintai (kau kan kucintai)" },
     { waktu: 73.0, teks: "Cukup aku milikmu kau milikku (tetap disampingku)" },
     { waktu: 81.0, teks: "Sampai jadi debu sampai akhir waktu" },
     { waktu: 89.5, teks: "Hooo kau tetap milikku" },
     { waktu: 99.0, teks: "Detak di jantungku cintaku abadi" },
-    { waktu: 113.0, teks: "Seribu kali lagi aku tak peduli" },
+    { waktu: 113.0, teks: "1000X lagi aku tak peduli" },
     { waktu: 122.0, teks: "Sampai kau tau betapa kau kucintai Hiii" },
     { waktu: 136.0, teks: "Kau akan kucari" }
 ];
